@@ -1,6 +1,7 @@
 package Enums;
 
-public enum DeleteState {
+public enum DeleteState
+{
     SUCCESS,
     FAILED,
     NOT_EXIST

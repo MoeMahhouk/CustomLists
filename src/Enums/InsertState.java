@@ -1,6 +1,7 @@
 package Enums;
 
-public enum InsertState {
+public enum InsertState
+{
     SUCCESS,
     FAILED,
     EXISTS

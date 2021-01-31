@@ -1,6 +1,7 @@
 package Enums;
 
-public enum ElementState {
+public enum ElementState
+{
     EXISTS,
     NOT_EXISTS
 }
