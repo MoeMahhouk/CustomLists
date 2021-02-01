@@ -1,9 +1,9 @@
-package Lists;
+package lists;
 
-import Enums.DeleteState;
-import Enums.ElementState;
-import Enums.InsertState;
-import Interfaces.IList;
+import enums.DeleteState;
+import enums.ElementState;
+import enums.InsertState;
+import interfaces.IList;
 
 public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLItem<T>>
 {
@@ -30,7 +30,7 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public InsertState add_element(T elem)
+    public InsertState addElement(T elem)
     {
         InsertState result = null;
         if (this.head == null)
@@ -80,7 +80,7 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public InsertState add_item(DLLItem<T> new_item)
+    public InsertState addItem(DLLItem<T> new_item)
     {
         if (new_item == null)
         {
@@ -130,7 +130,7 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public DLLItem<T> get_item_by_value(T elem)
+    public DLLItem<T> getItemByValue(T elem)
     {  //ToDo: create a tuple class that returns the state and potentially the item in case it was successful
         if (elem == null) return null;
         DLLItem<T> tmp_head = head;
@@ -154,7 +154,7 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public DLLItem<T> get_item(DLLItem<T> item)
+    public DLLItem<T> getItem(DLLItem<T> item)
     { //ToDo: create a tuple class that returns the state and potentially the item in case it was successful
         if (item == null) return null;
         DLLItem<T> tmp_head = head;
@@ -178,7 +178,7 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public ElementState is_exist(T elem)
+    public ElementState contains(T elem)
     {
         DLLItem<T> tmp = head;
         while (tmp != null)
@@ -193,9 +193,9 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public DeleteState remove_item(DLLItem<T> item)
+    public DeleteState removeItem(DLLItem<T> item)
     {
-        DLLItem<T> tmp = get_item(item);   //this should be something else in case the tuples class is implemented
+        DLLItem<T> tmp = getItem(item);   //this should be something else in case the tuples class is implemented
         if (tmp == null) return DeleteState.NOT_EXIST;
 
         if (tmp.getPrev() != null && tmp.getNext() != null)
@@ -221,10 +221,10 @@ public class DoubleLinkedList<T extends Comparable<T>> implements IList<T, DLLIt
     }
 
     @Override
-    public DeleteState remove_item_by_value(T elem)
+    public DeleteState removeItemByValue(T elem)
     { //ToDo: here a tuple class would also be better let the method return the deleted object back instead
-        DLLItem<T> tmp = get_item_by_value(elem);
-        return remove_item(tmp);
+        DLLItem<T> tmp = getItemByValue(elem);
+        return removeItem(tmp);
     }
 
     public String toString()

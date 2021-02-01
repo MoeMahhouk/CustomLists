@@ -1,7 +1,7 @@
 package main;
 
-import Lists.DLLItem;
-import Lists.DoubleLinkedList;
+import lists.DLLItem;
+import lists.DoubleLinkedList;
 
 public class TestClass
 {
@@ -11,43 +11,43 @@ public class TestClass
         DoubleLinkedList<Integer> intList = new DoubleLinkedList<>();
         System.out.println(intList.toString());
 
-        intList.add_element(10);
+        intList.addElement(10);
         System.out.println(intList.toString());
-        intList.add_element(2);
+        intList.addElement(2);
         System.out.println(intList.toString());
-        intList.add_element(50);
-        System.out.println(intList.toString());
-
-        intList.add_element(15);
+        intList.addElement(50);
         System.out.println(intList.toString());
 
-        intList.add_element(30);
+        intList.addElement(15);
+        System.out.println(intList.toString());
+
+        intList.addElement(30);
         System.out.println(intList.toString());
 
 
-        intList.add_element(25);
+        intList.addElement(25);
 
         System.out.println(intList.toString());
 
-        intList.add_element(25);
+        intList.addElement(25);
         System.out.println(intList.toString());
 
-        intList.remove_item_by_value(15);
+        intList.removeItemByValue(15);
         System.out.println(intList.toString());
 
-        intList.remove_item_by_value(10);
+        intList.removeItemByValue(10);
         System.out.println(intList.toString());
 
-        intList.remove_item_by_value(50);
+        intList.removeItemByValue(50);
         System.out.println(intList.toString());
 
-        intList.remove_item_by_value(30);
+        intList.removeItemByValue(30);
         System.out.println(intList.toString());
 
-        intList.remove_item_by_value(25);
+        intList.removeItemByValue(25);
         System.out.println(intList.toString());
 
-        intList.remove_item_by_value(2);
+        intList.removeItemByValue(2);
         System.out.println(intList.toString());
 
         DLLItem<Integer> first_item = new DLLItem<>(10);
@@ -55,10 +55,10 @@ public class TestClass
         DLLItem<Integer> third_item = new DLLItem<>(25);
         DLLItem<Integer> fourth_item = new DLLItem<>(15);
 
-        intList.add_item(first_item);
-        intList.add_item(second_item);
-        intList.add_item(third_item);
-        intList.add_item(fourth_item);
+        intList.addItem(first_item);
+        intList.addItem(second_item);
+        intList.addItem(third_item);
+        intList.addItem(fourth_item);
 
         System.out.println(intList.toString());
 

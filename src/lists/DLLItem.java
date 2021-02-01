@@ -1,6 +1,4 @@
-package Lists;
-
-import Interfaces.IItem;
+package lists;
 
 public class DLLItem<T extends Comparable<T>> extends Item<T>
 {

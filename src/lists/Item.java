@@ -1,6 +1,6 @@
-package Lists;
+package lists;
 
-import Interfaces.IItem;
+import interfaces.IItem;
 
 public class Item<T extends Comparable<T>> implements IItem<T>
 {
