@@ -3,7 +3,7 @@ package lists.queue;
 import errors.QueueIsEmptyException;
 import interfaces.IQueue;
 
-public class SimpleQueue<T> implements IQueue<T> {
+public class SimpleQueue<T extends Comparable<T>> implements IQueue<T> {
     QueueItem<T> queueList;
 
 
@@ -36,7 +36,7 @@ public class SimpleQueue<T> implements IQueue<T> {
         if (queueList == null) {
             throw new QueueIsEmptyException("The Queue is Empty!\n");
         } else {
-            T item = queueList.item;
+            T item = queueList.getValue();
             queueList = queueList.next;
             return item;
         }
@@ -47,7 +47,7 @@ public class SimpleQueue<T> implements IQueue<T> {
         if (queueList == null) {
             throw new QueueIsEmptyException("The Queue is Empty!\n");
         } else {
-            return queueList.item;
+            return queueList.getValue();
         }
     }
 }

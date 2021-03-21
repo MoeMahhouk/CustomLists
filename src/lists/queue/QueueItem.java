@@ -1,12 +1,12 @@
 package lists.queue;
 
-public class QueueItem<T> {
-    protected T item;
+import items.Item;
+
+public class QueueItem<T extends Comparable<T>> extends Item<T> {
     protected QueueItem<T> next;
-    public QueueItem() {
-    }
+
     public QueueItem(T item) {
-        this.item = item;
+        super(item);
         this.next = null;
     }
 }
