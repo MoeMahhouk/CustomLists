@@ -1,7 +1,7 @@
 package main;
 
-import lists.DLLItem;
-import lists.DoubleLinkedList;
+import lists.doubleLinkedList.DLLItem;
+import lists.doubleLinkedList.DoubleLinkedList;
 
 public class TestClass
 {
