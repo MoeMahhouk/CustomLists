@@ -4,7 +4,9 @@ import errors.QueueIsEmptyException;
 import interfaces.IQueue;
 
 public class SimpleQueue<T extends Comparable<T>> implements IQueue<T> {
-    QueueItem<T> queueList;
+
+
+    private QueueItem<T> queueList;
 
 
     public SimpleQueue() {
@@ -14,6 +16,9 @@ public class SimpleQueue<T extends Comparable<T>> implements IQueue<T> {
         this.queueList = queueList;
     }
 
+    public QueueItem<T> getQueueList() {
+        return queueList;
+    }
     @Override
     public void enqueue(T item) {
         if (queueList == null) {
