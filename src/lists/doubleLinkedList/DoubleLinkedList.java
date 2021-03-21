@@ -1,4 +1,4 @@
-package lists;
+package lists.doubleLinkedList;
 
 import enums.DeleteState;
 import enums.ElementState;

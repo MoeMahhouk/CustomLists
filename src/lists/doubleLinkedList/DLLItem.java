@@ -1,4 +1,6 @@
-package lists;
+package lists.doubleLinkedList;
+
+import items.Item;
 
 public class DLLItem<T extends Comparable<T>> extends Item<T>
 {
